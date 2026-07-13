@@ -12,17 +12,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Run tests
-        run: npx mocha "./testing-1/tests/**/*.test.cjs"
-          
-
-      - name: Verify installation
-        run: |
-          node -v
-          npm -v
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
-      - name: Run tests
-        run: npm test
+      - name: Run tests in testing-1
+        run: ./node_modules/.bin/mocha "./testing-1/tests/**/*.test.cjs"
