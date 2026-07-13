@@ -1,0 +1,21 @@
+{
+  "name": "mocha-chai",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha \"./tests/**/*.test.cjs\""
+
+  },
+  "dependencies": {
+    "chai-http": "^5.1.2",
+    "mocha": "^11.7.6"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "devDependencies": {},
+  "keywords": []
+}
