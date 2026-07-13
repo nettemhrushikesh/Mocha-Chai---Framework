@@ -7,15 +7,16 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha \"./tests/**/*.test.cjs\""
-
   },
   "dependencies": {
-    "chai-http": "^5.1.2",
-    "mocha": "^11.7.6"
+    "chai-http": "^5.1.2"
   },
   "directories": {
     "test": "tests"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "chai": "^6.2.2",
+    "mocha": "^11.7.6"
+  },
   "keywords": []
 }
