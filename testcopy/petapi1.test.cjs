@@ -2,7 +2,7 @@
 //    mocha \"./testcopy/pettest1.test.cjs\""
 const chai = require('chai');
 const chaiHttp = require('chai-http');
-const { BASE_URL } = require('../utils/config');
+const { BASE_URL } = require('../testing-1/utils/config');
 
 chai.use(chaiHttp);
 

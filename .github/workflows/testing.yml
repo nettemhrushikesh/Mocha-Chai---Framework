@@ -12,10 +12,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install Node.js
-        run: |
-          curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
-          sudo apt-get install -y nodejs
+      - name: Run tests
+        run: npx mocha "./testing-1/tests/**/*.test.cjs"
+          
 
       - name: Verify installation
         run: |
