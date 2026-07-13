@@ -11,7 +11,7 @@ const {
     createUserArray,
     updateUser,
     createUserdata
-} = require("../data/userData");
+} = require("../data/userdata");
 
 describe("User API", () => {
 

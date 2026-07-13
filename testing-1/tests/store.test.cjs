@@ -2,7 +2,7 @@ const chai = require("chai");
 const expect = chai.expect;
 
 const storeApi = require("../api/storeApi");
-const { createOrder } = require("../data/storeData");
+const { createOrder } = require("../data/storedata");
 
 describe("Store API", () => {
     let orderId = Math.floor(Math.random() * 1000);
