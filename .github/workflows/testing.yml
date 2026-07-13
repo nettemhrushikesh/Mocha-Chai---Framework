@@ -1,8 +1,9 @@
-name: Node.js CI
+name: Run Tests
 
 on:
   push:
-    branches: [master]
+    branches:
+      - master
 
 jobs:
   test:
@@ -11,9 +12,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 24
+      - name: Install Node.js
+        run: |
+          curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+          sudo apt-get install -y nodejs
 
-      - run: npm install
-      - run: npm test
+      - name: Verify installation
+        run: |
+          node -v
+          npm -v
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
